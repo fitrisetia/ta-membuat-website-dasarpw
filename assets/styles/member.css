@@ -1,0 +1,62 @@
+/* Gallery Grid Layout */
+article.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto; /* Memastikan artikel tetap berada di tengah */
+  width: 100%; /* Mengatur lebar artikel agar memenuhi kontainer */
+  max-width: 1600px; /* Maksimum lebar artikel */
+}
+
+.gallery1-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Default 5 kolom */
+  gap: 20px;
+  max-width: 100%; /* Maksimum lebar grid agar menyesuaikan */
+  margin: 0 auto;
+  width: 100%; /* Memastikan grid menyesuaikan lebar kontainer */
+}
+
+.member1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+  
+.member1 img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+  
+.member1 p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Responsif: 3 kolom pada layar sedang */
+@media screen and (max-width: 1024px) {
+  .gallery1-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  }
+}
+
+/* Responsif: Tetap 3 kolom untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .gallery1-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom untuk layar lebih kecil */
+  }
+}
+
+/* Responsif: 3 kolom pada layar ekstra kecil */
+@media screen and (max-width: 480px) {
+  .gallery1-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom */
+  }
+}
